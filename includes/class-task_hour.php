@@ -67,7 +67,7 @@ class Kanban_Task_Hour extends Kanban_Db
 			$operator = substr( $_POST['operator'], 0, 1 ) == '-' ? '-' : '+';
 			$val = sprintf( '%s%s', $operator, abs( floatval( $_POST['operator'] ) ) );
 		}
-		catch ( Exception $e )
+		catch( Exception $e )
 		{
 			wp_send_json_error( array(
 				'message' => sprintf( 'Error saving %s', str_replace( '_', ' ', self::$slug ) )
