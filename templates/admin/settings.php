@@ -57,7 +57,7 @@
 
 
 							<div class="switch-field">
-								<input type="radio" id="show_all_cols_1" name="settings[show_all_cols]" value="1" <?php echo (bool) $settings['show_all_cols'] ? 'checked' : ''; ?>>
+								<input type="radio" id="show_all_cols_1" name="settings[show_all_cols]" value="1" <?php echo(bool) $settings['show_all_cols'] ? 'checked' : ''; ?>>
 								<label for="show_all_cols_1">Yes</label>
 								<input type="radio" id="show_all_cols_0" name="settings[show_all_cols]" value="0" <?php echo ! (bool) $settings['show_all_cols'] ? 'checked' : ''; ?>>
 								<label for="show_all_cols_0">No</label>
@@ -74,7 +74,7 @@
 						</th>
 						<td>
 							<div class="switch-field">
-								<input type="radio" id="default_to_compact_view_1" name="settings[default_to_compact_view]" value="1" <?php echo (bool) $settings['default_to_compact_view'] ? 'checked' : ''; ?>>
+								<input type="radio" id="default_to_compact_view_1" name="settings[default_to_compact_view]" value="1" <?php echo(bool) $settings['default_to_compact_view'] ? 'checked' : ''; ?>>
 								<label for="default_to_compact_view_1">Yes</label>
 								<input type="radio" id="default_to_compact_view_0" name="settings[default_to_compact_view]" value="0" <?php echo ! (bool) $settings['default_to_compact_view'] ? 'checked' : ''; ?>>
 								<label for="default_to_compact_view_0">No</label>
@@ -87,7 +87,7 @@
 						</th>
 						<td>
 							<div class="switch-field">
-								<input type="radio" id="hide_progress_bar_1" name="settings[hide_progress_bar]" value="1" <?php echo (bool) $settings['hide_progress_bar'] ? 'checked' : ''; ?>>
+								<input type="radio" id="hide_progress_bar_1" name="settings[hide_progress_bar]" value="1" <?php echo(bool) $settings['hide_progress_bar'] ? 'checked' : ''; ?>>
 								<label for="hide_progress_bar_1">Yes</label>
 								<input type="radio" id="hide_progress_bar_0" name="settings[hide_progress_bar]" value="0" <?php echo ! (bool) $settings['hide_progress_bar'] ? 'checked' : ''; ?>>
 								<label for="hide_progress_bar_0">No</label>
@@ -144,7 +144,7 @@
 									<?php echo $user_name; ?>
 								</option>
 <?php endforeach // $all_users_arr; ?>
-								<option value="" <?php echo ! isset( $settings['default_assigned_to'] ) || empty( $settings['default_assigned_to'] ) ? 'selected' : ''; ?>>
+								<option value='' <?php echo ! isset( $settings['default_assigned_to'] ) || empty( $settings['default_assigned_to'] ) ? 'selected' : ''; ?>>
 									No one
 								</option>
 							</select>
@@ -216,7 +216,7 @@
 									<?php echo $estimate->title; ?>
 								</option>
 <?php endforeach // $estimates; ?>
-								<option value="" <?php echo ! isset( $settings['default_estimate'] ) || empty( $settings['default_estimate'] ) ? 'selected' : ''; ?>>
+								<option value='' <?php echo ! isset( $settings['default_estimate'] ) || empty( $settings['default_estimate'] ) ? 'selected' : ''; ?>>
 									None
 								</option>
 							</select>
