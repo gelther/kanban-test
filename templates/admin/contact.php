@@ -13,10 +13,10 @@
 		<table class="form-table">
 			<td>
 				<label class="radio">
-					<input type="radio" name="request" value="Technical support request" checked>
+					<input type='radio' name='request' value='Technical support request' checked>
 					<span><?php esc_attr_e( 'Request technical support', 'kanban' ); ?></span>
 				</label>
-				
+
 			</td>
 		</table>
 	</form>
