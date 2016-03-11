@@ -8,7 +8,7 @@
 			<?php echo $_GET['alert']; ?>
 		</p>
 	</div>
-<?php endif ?>
+<?php endif // ?>
 	<form action="" method="post">
 		<table class="form-table">
 			<td>
