@@ -288,7 +288,7 @@ class Kanban_Admin
 			{
 				$addons = json_decode( $response['body'] );
 			}
-			catch ( Exception $e )
+			catch( Exception $e )
 			{
 				$addons = array();
 			}
@@ -349,7 +349,7 @@ class Kanban_Admin
 
 			$_GET['alert'] = "Email sent! We'll get back to you as soon as we can.";
 		}
-		catch ( Exception $e )
+		catch( Exception $e )
 		{
 			$_GET['alert'] = "Email could not be sent. Please contact us through <a href=\"http://kanbanwp.com\" target=\"_blank\">https://kanbanwp.com</a>.";
 		}
