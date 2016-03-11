@@ -16,7 +16,7 @@
 					<input type="radio" name="request" value="Technical support request" checked>
 					<span><?php esc_attr_e( 'Request technical support', 'kanban' ); ?></span>
 				</label>
-				
+
 			</td>
 		</table>
 	</form>
