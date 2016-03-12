@@ -1,5 +1,3 @@
-
-
 <div class="wrap">
 
 <?php if ( isset( $_GET['alert'] ) ) : ?>
@@ -8,15 +6,15 @@
 			<?php echo $_GET['alert']; ?>
 		</p>
 	</div>
-<?php endif ?>
-	<form action="" method="post">
-		<table class="form-table">
-			<td>
-				<label class="radio">
-					<input type="radio" name="request" value="Technical support request" checked>
-					<span><?php esc_attr_e( 'Request technical support', 'kanban' ); ?></span>
-				</label>
+<?php endif // ?>
+<form action="" method="post">
+	<table class="form-table">
+		<td>
+			<label class="radio">
+				<input type="radio" name="request" value="Technical support request" checked>
+				<span><?php esc_attr_e( 'Request technical support', 'kanban' ); ?></span>
+			</label>
 
-			</td>
-		</table>
-	</form>
+		</td>
+	</table>
+</form>
