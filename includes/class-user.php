@@ -35,12 +35,12 @@ class Kanban_User
 		if ( ! isset( $_POST[Kanban_Utils::get_nonce()] ) || ! wp_verify_nonce( $_POST[Kanban_Utils::get_nonce()], 'request_access' ) ) return;
 
 		$admin_email = get_option( 'admin_email' );
-		$blogname = get_option( 'blogname' );
+		$blogname    = get_option( 'blogname' );
 
 		$headers = 'From: ' . $admin_email . '\r\n';
 
 		$current_user_id = get_current_user_id();
-		$current_user = get_user_by( 'id', $current_user_id );
+		$current_user    = get_user_by( 'id', $current_user_id );
 
 		wp_mail(
 			$admin_email,
@@ -123,10 +123,10 @@ class Kanban_User
 
 
 
-		$creds = array();
-		$creds['user_login'] = $user->user_login;
+		$creds                  = array();
+		$creds['user_login']    = $user->user_login;
 		$creds['user_password'] = $_POST['password'];
-		$creds['remember'] = true;
+		$creds['remember']      = true;
 
 		$user = wp_signon( $creds, false );
 
@@ -267,7 +267,7 @@ class Kanban_User
 		}
 		else
 		{
-			$parts = explode( '@', $user->user_email );
+			$parts    = explode( '@', $user->user_email );
 			$username = $parts[0];
 			return $username;
 		}
@@ -311,7 +311,7 @@ class Kanban_User
 		$email = '';
 		if ( is_numeric( $id_or_email ) )
 		{
-			$id = (int) $id_or_email;
+			$id   = (int) $id_or_email;
 			$user = get_userdata( $id );
 			if ( $user )
 			{
@@ -330,7 +330,7 @@ class Kanban_User
 				return false;
 
 			if ( ! empty( $id_or_email->user_id ) ) {
-				$id = (int) $id_or_email->user_id;
+				$id   = (int) $id_or_email->user_id;
 				$user = get_userdata( $id );
 				if ( $user )
 					$email = $user->user_email;
@@ -342,7 +342,7 @@ class Kanban_User
 		}
 
 		$hashkey = md5( strtolower( trim( $email ) ) );
-		$uri = 'http://www.gravatar.com/avatar/' . $hashkey . '?d=404';
+		$uri     = 'http://www.gravatar.com/avatar/' . $hashkey . '?d=404';
 
 		$data = wp_cache_get( $hashkey );
 		if ( false === $data ) {

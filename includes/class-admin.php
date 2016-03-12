@@ -276,7 +276,7 @@ class Kanban_Admin
 		global $wpdb;
 
 		$current_user_id = get_current_user_id();
-		$lastRun = (int) Kanban_Option::get_option( 'admin-addons-check' );
+		$lastRun         = (int) Kanban_Option::get_option( 'admin-addons-check' );
 
 		if ( time() - $lastRun >= 60*60*24 ) // 1 day
 		{
