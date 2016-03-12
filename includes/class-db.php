@@ -243,8 +243,6 @@ abstract class Kanban_Db
 			'data'   => $good_data,
 			'format' => $format
 		);
-
-
 	}
 
 

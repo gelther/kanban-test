@@ -58,7 +58,6 @@ class Kanban_Template
 		add_action( 'init', array( __CLASS__, 'protect_slug' ) );
 
 		add_filter( 'template_include', array( __CLASS__, 'template_chooser' ), 99 );
-
 	}
 
 

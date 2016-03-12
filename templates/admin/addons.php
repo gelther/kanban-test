@@ -20,7 +20,7 @@
 			<div class="addon-header">
 <?php if ( ! empty( $addon->post_img ) ) : ?>
 				<img src="<?php echo $addon->post_img; ?>">
-<?php else: // post_img ?>
+<?php else : // post_img ?>
 				<h3><?php echo $addon->post_title; ?></h3>
 <?php endif // post_img ?>
 			</div><!-- header -->
