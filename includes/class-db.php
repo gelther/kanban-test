@@ -557,7 +557,7 @@ abstract class Kanban_Db
 
 				if ( $success )
 				{
-					$wpdb->update (
+					$wpdb->update(
 						"{$wpdb->prefix}posts",
 						array( 'post_status' => 'trash' ),
 						array( 'ID' => $post->id )
@@ -753,7 +753,7 @@ abstract class Kanban_Db
 
 				if ( $success )
 				{
-					$wpdb->update (
+					$wpdb->update(
 						"{$wpdb->prefix}posts",
 						array( 'post_status' => 'trash' ),
 						array( 'ID' => $post->id )
@@ -796,7 +796,7 @@ abstract class Kanban_Db
 						// mark as trash
 						if ( $success )
 						{
-							$wpdb->update (
+							$wpdb->update(
 								"{$wpdb->prefix}posts",
 								array( 'post_status' => 'trash' ),
 								array( 'ID' => $comment->ID )
@@ -906,7 +906,7 @@ abstract class Kanban_Db
 
 
 		// cleanup records
-		$wpdb->update (
+		$wpdb->update(
 			"{$wpdb->prefix}posts",
 			array( 'post_status' => 'trash' ),
 			array(
@@ -915,7 +915,7 @@ abstract class Kanban_Db
 			)
 		);
 
-		$wpdb->update (
+		$wpdb->update(
 			"{$wpdb->prefix}posts",
 			array( 'post_status' => 'trash' ),
 			array(
@@ -924,7 +924,7 @@ abstract class Kanban_Db
 			)
 		);
 
-		$wpdb->update (
+		$wpdb->update(
 			"{$wpdb->prefix}posts",
 			array( 'post_status' => 'trash' ),
 			array(
