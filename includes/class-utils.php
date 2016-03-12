@@ -51,7 +51,7 @@ class Kanban_Utils
 			}
 		}
 
-		return FALSE;
+		return false;
 	}
 
 
