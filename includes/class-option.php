@@ -234,7 +234,7 @@ class Kanban_Option extends Kanban_Db
 			$settings['allowed_users'] = unserialize( $settings['allowed_users'] );
 		}
 
-		$all_users = get_users();
+		$all_users     = get_users();
 		$all_users_arr = array();
 		foreach ( $all_users as $user )
 		{
@@ -264,7 +264,7 @@ class Kanban_Option extends Kanban_Db
 
 
 
-		$statuses = Kanban_Status::get_all();
+		$statuses   = Kanban_Status::get_all();
 		$status_ids = array_keys( $statuses );
 
 
@@ -318,7 +318,7 @@ class Kanban_Option extends Kanban_Db
 
 
 
-		$estimates = Kanban_Estimate::get_all();
+		$estimates    = Kanban_Estimate::get_all();
 		$estimate_ids = array_keys( $estimates );
 
 
