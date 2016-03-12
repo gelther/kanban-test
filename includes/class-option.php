@@ -191,7 +191,7 @@ class Kanban_Option extends Kanban_Db
 			}
 		}
 
-		return FALSE;
+		return false;
 	}
 
 

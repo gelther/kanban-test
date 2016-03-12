@@ -225,7 +225,7 @@ abstract class Kanban_Db
 						$good_data[$key] = $value->format( 'Y-m-d H:i:s' );
 						$format[]        = '%s';
 					}
-					elseif ( ($timestamp = strtotime( $value )) !== FALSE )
+					elseif ( ($timestamp = strtotime( $value )) !== false )
 					{
 						$dt              = new DateTime( $value );
 						$good_data[$key] = $dt->format( 'Y-m-d H:i:s' );
@@ -256,7 +256,7 @@ abstract class Kanban_Db
 	 */
 	static function check_for_updates()
 	{
-		if ( self::installed_ver() == Kanban::get_instance()->settings->plugin_data['Version'] ) return FALSE;
+		if ( self::installed_ver() == Kanban::get_instance()->settings->plugin_data['Version'] ) return false;
 
 		global $charset_collate, $wpdb;
 
@@ -377,8 +377,8 @@ abstract class Kanban_Db
 		// build response
 		$response = array(
 			'posts_remaining' => Kanban::get_instance()->settings->records_to_move,
-			'continue'        => FALSE,
-			'done'            => FALSE
+			'continue'        => false,
+			'done'            => false
 		);
 
 
@@ -410,10 +410,10 @@ abstract class Kanban_Db
 				delete_option( 'kanban_user' );
 			}
 
-			update_option( 'kanban_migrate_users_moved', TRUE );
+			update_option( 'kanban_migrate_users_moved', true );
 
 			$response['posts_remaining'] = $response['posts_remaining']-1;
-			$response['continue']        = TRUE;
+			$response['continue']        = true;
 			$response['message']         = 'Allowed users moved';
 			wp_send_json_success( $response );
 		}
@@ -512,10 +512,10 @@ abstract class Kanban_Db
 
 			}
 
-			update_option( 'kanban_migrate_terms_moved', TRUE );
+			update_option( 'kanban_migrate_terms_moved', true );
 
 			$response['posts_remaining'] = $response['posts_remaining']-2;
-			$response['continue']        = TRUE;
+			$response['continue']        = true;
 			$response['message']         = 'statuses and estimates updated';
 			wp_send_json_success( $response );
 
@@ -568,7 +568,7 @@ abstract class Kanban_Db
 
 
 			$response['posts_remaining'] = $response['posts_remaining']-3;
-			$response['continue']        = TRUE;
+			$response['continue']        = true;
 			$response['message']         = sprintf( 'project %s moved', $post->id );
 			wp_send_json_success( $response );
 		} // projects
@@ -804,7 +804,7 @@ abstract class Kanban_Db
 						}
 
 						// add task hour
-						if ( strpos( $comment->post_content, 'hour of work' ) !== FALSE )
+						if ( strpos( $comment->post_content, 'hour of work' ) !== false )
 						{
 							$data = array(
 								'task_id'        => $task_id,
@@ -830,7 +830,7 @@ abstract class Kanban_Db
 
 
 			$response['posts_remaining'] = Kanban::get_instance()->settings->records_to_move - 4;
-			$response['continue']        = TRUE;
+			$response['continue']        = true;
 			wp_send_json_success( $response );
 
 		} // task
@@ -951,7 +951,7 @@ abstract class Kanban_Db
 
 
 
-		$response['done'] = TRUE;
+		$response['done'] = true;
 		wp_send_json_success( $response );
 	}
 

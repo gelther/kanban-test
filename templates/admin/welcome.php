@@ -11,7 +11,7 @@
 
 	<?php if ( isset($_GET['activation']) ) : ?>
 		<div class="updated notice is-dismissible kanban-welcome-notice">
-			<p><?php echo __('Thanks for using Kanban for WordPress!', 'kanban') ?></p>
+			<p><?php echo __('Thanks for using Kanban for WordPress!', 'kanban'); ?></p>
 		</div>
 		<script>
 			jQuery( document.body ).on( 'click', '.kanban-welcome-notice .notice-dismiss', function() {

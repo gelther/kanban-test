@@ -225,7 +225,7 @@ class Kanban_User
 
 				// fancy name formating
 				Kanban_User::get_instance()->allowed_users[$user_id]->long_name_email = Kanban_User::get_username_long( $user );
-				Kanban_User::get_instance()->allowed_users[$user_id]->short_name = Kanban_User::get_username_short( $user, TRUE );
+				Kanban_User::get_instance()->allowed_users[$user_id]->short_name = Kanban_User::get_username_short( $user, true );
 				Kanban_User::get_instance()->allowed_users[$user_id]->initials = Kanban_User::get_initials( $user );
 			}
 		}

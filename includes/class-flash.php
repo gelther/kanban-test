@@ -14,14 +14,14 @@ Kanban_Flash::init();
 class Kanban_Flash
 {
 	static $namespace = 'kanban-flash';
-	static $is_session_available = FALSE;
+	static $is_session_available = false;
 
 
 	static function init()
 	{
 		if ( ! function_exists( 'session_start' ) ) return;
 
-		self::$is_session_available = TRUE;
+		self::$is_session_available = true;
 
 		// @link http://stackoverflow.com/a/28377350/38241
 		if ( version_compare( phpversion(), '5.4.0' ) != -1 )

@@ -35,7 +35,7 @@ class Kanban_Admin
 		);
 
 		// Remove Admin bar
-		if ( strpos( $_SERVER['REQUEST_URI'], sprintf( '/%s/', Kanban::$slug ) ) !== FALSE )
+		if ( strpos( $_SERVER['REQUEST_URI'], sprintf( '/%s/', Kanban::$slug ) ) !== false )
 		{
 			add_filter( 'show_admin_bar', '__return_false' );
 		}

@@ -69,7 +69,7 @@ class Kanban_Template
 	static function protect_slug()
 	{
 		// only protect pages with our slug
-		if ( strpos( $_SERVER['REQUEST_URI'], sprintf( '/%s/', Kanban::$slug ) ) === FALSE ) return;
+		if ( strpos( $_SERVER['REQUEST_URI'], sprintf( '/%s/', Kanban::$slug ) ) === false ) return;
 
 
 
@@ -88,7 +88,7 @@ class Kanban_Template
 		if ( in_array( $current_user_id, array_keys( $allowed_user_ids ) ) )
 		{
 			// redirect away from login
-			if ( strpos( $_SERVER['REQUEST_URI'], sprintf( '/%s/login', Kanban::$slug ) ) !== FALSE )
+			if ( strpos( $_SERVER['REQUEST_URI'], sprintf( '/%s/login', Kanban::$slug ) ) !== false )
 			{
 				wp_redirect( sprintf( '%s/%s/board', site_url(), Kanban::$slug ) );
 				exit;
@@ -103,7 +103,7 @@ class Kanban_Template
 
 
 		// allow for addition checks
-		$can_view = apply_filters( 'kanban_template_protect_slug_check', FALSE );
+		$can_view = apply_filters( 'kanban_template_protect_slug_check', false );
 
 
 
@@ -112,7 +112,7 @@ class Kanban_Template
 
 
 		// anyone can see login screen
-		if ( strpos( $_SERVER['REQUEST_URI'], sprintf( '/%s/login', Kanban::$slug ) ) !== FALSE ) return;
+		if ( strpos( $_SERVER['REQUEST_URI'], sprintf( '/%s/login', Kanban::$slug ) ) !== false ) return;
 
 
 
@@ -135,7 +135,7 @@ class Kanban_Template
 
 
 		// if url doesn't include our slug, return
-		if ( strpos( $_SERVER['REQUEST_URI'], sprintf( '/%s/', Kanban::$slug ) ) === FALSE ) return $template;
+		if ( strpos( $_SERVER['REQUEST_URI'], sprintf( '/%s/', Kanban::$slug ) ) === false ) return $template;
 
 
 
@@ -145,7 +145,7 @@ class Kanban_Template
 
 		foreach ( self::$page_slugs as $slug => $data )
 		{
-			if ( strpos( strtok( $_SERVER['REQUEST_URI'], '?' ), sprintf( '%s/%s', Kanban::$slug, $slug ) ) !== FALSE )
+			if ( strpos( strtok( $_SERVER['REQUEST_URI'], '?' ), sprintf( '%s/%s', Kanban::$slug, $slug ) ) !== false )
 			{
 				$template = Kanban_Template::find_template( $slug );
 
@@ -162,7 +162,7 @@ class Kanban_Template
 								self::get_instance()->style = array();
 							}
 
-							if ( strpos( $path, '%s' ) !== FALSE )
+							if ( strpos( $path, '%s' ) !== false )
 							{
 								$path = sprintf( $path, Kanban::get_instance()->settings->uri );
 							}
@@ -180,7 +180,7 @@ class Kanban_Template
 								self::get_instance()->script = array();
 							}
 
-							if ( strpos( $path, '%s' ) !== FALSE )
+							if ( strpos( $path, '%s' ) !== false )
 							{
 								$path = sprintf( $path, Kanban::get_instance()->settings->uri );
 							}
