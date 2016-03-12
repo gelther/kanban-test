@@ -45,7 +45,6 @@ class Kanban_Option extends Kanban_Db
 		add_action( 'init', array( __CLASS__, 'save_settings' ) );
 
 		add_action( 'admin_enqueue_scripts', array( __CLASS__, 'enqueue_js' ) );
-
 	}
 
 
