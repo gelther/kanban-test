@@ -18,7 +18,7 @@
 				window.history.replaceState( 'Object', 'Title', '<?php echo esc_url( admin_url( 'admin.php?page=kanban_welcome' ) ); ?>' );
 			} );
 		</script>
-	<?php endif ?>
+	<?php endif; ?>
 
 
 

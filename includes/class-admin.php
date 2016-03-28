@@ -169,7 +169,7 @@ class Kanban_Admin
 				{
 					try
 					{
-						var percentage = 100-( ( 100 * parseInt(data.data.posts_remaining))/records_to_move);
+						var percentage = 100-( ( 100 * parseInt( data.data.posts_remaining ) )/records_to_move );
 
 						if ( percentage > 100 )
 						{

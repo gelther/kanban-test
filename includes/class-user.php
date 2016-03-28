@@ -361,7 +361,7 @@ class Kanban_User
 			{
 				$data = $response['response']['code'];
 			}
-			wp_cache_set( $hashkey, $data, $group = '', $expire = 60*5);
+			wp_cache_set( $hashkey, $data, $group = '', $expire = 60*5 );
 
 		}
 		if ( $data == '200' )
