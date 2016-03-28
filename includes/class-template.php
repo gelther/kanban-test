@@ -21,7 +21,7 @@ class Kanban_Template
 	// the list of kanban-related URL's
 	static $page_slugs = array(
 		'board' => array(
-			'style'  => array(
+			'style' => array(
 				'bootstrap' => '%sbootstrap/css/bootstrap.min.css', // "//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js",
 				'board'     => '%scss/board.css'
 			),
